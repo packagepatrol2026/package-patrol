@@ -67,7 +67,7 @@ constexpr uint8_t LCD_COLS = 16;
 // Tune STEPPER_TRAVEL_STEPS only (e.g. 512–1024). Same |steps| every full open or full close.
 constexpr long STEPPER_TRAVEL_STEPS = 768;
 constexpr long STEPPER_POS_CLOSED = 0;
-constexpr long STEPPER_POS_OPEN = STEPPER_TRAVEL_STEPS;
+constexpr long STEPPER_POS_OPEN = -STEPPER_TRAVEL_STEPS;
 
 /** Logical state for STATUS? (OPEN / LOCK / keypad unlock). */
 bool boxUnlocked = false;
