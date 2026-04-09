@@ -1,6 +1,7 @@
 <template>
   <ion-page>
-    <ion-content class="ion-padding">
+    <ion-content>
+      <div class="connect-layout ion-padding">
       <div
         class="logo-wrap"
         :class="{ 'logo-wrap--after-unknown-banner': lock.status === 'UNKNOWN' }"
@@ -42,6 +43,15 @@
       >
         {{ locale.t('connect.disconnect') }}
       </ion-button>
+
+      <footer class="connect-footer">
+        <p class="footer-contact">
+          <span class="footer-label">{{ locale.t('connect.contactUs') }}</span>
+          <a class="footer-link" :href="`mailto:${CONTACT_EMAIL}`">{{ CONTACT_EMAIL }}</a>
+        </p>
+        <p class="footer-copyright">{{ locale.t('connect.copyright') }}</p>
+      </footer>
+      </div>
     </ion-content>
   </ion-page>
 </template>
@@ -59,6 +69,8 @@ const locale = useLocaleStore();
 const connection = useConnectionStore();
 const lock = useLockStore();
 const { pairAndConnect, disconnect } = useBluetooth();
+
+const CONTACT_EMAIL = 'package.patrol.2026@gmail.com';
 
 const busy = ref(false);
 
@@ -89,6 +101,13 @@ async function onDisconnect() {
 </script>
 
 <style scoped>
+.connect-layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
 .logo-wrap {
   display: flex;
   justify-content: center;
@@ -133,5 +152,43 @@ async function onDisconnect() {
 .status-err {
   color: var(--ion-color-danger-shade);
   font-size: 0.9rem;
+}
+
+.connect-footer {
+  margin-top: auto;
+  padding-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--ion-color-medium);
+}
+
+.footer-contact {
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+
+.footer-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: var(--ion-text-color);
+  opacity: 0.85;
+}
+
+.footer-link {
+  color: var(--ion-color-primary);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.footer-link:active {
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 0.8125rem;
+  opacity: 0.9;
 }
 </style>

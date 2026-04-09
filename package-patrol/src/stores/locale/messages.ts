@@ -49,6 +49,8 @@ export const messages: Record<LocaleCode, MessageTree> = {
       webHint: 'Use Chrome or Edge on desktop for Web Bluetooth. Keep Bluetooth enabled.',
       nativeHint: 'Bluetooth permission may be requested. Stay within range of the box.',
       error: 'Connection error: {msg}',
+      contactUs: 'Contact us',
+      copyright: '© 2026',
     },
     pin: {
       title: 'PIN code',
@@ -123,6 +125,8 @@ export const messages: Record<LocaleCode, MessageTree> = {
       webHint: 'Usa Chrome o Edge en el escritorio para Web Bluetooth. Mantén Bluetooth activado.',
       nativeHint: 'Puede pedirse permiso de Bluetooth. Mantente cerca de la caja.',
       error: 'Error de conexión: {msg}',
+      contactUs: 'Contáctanos',
+      copyright: '© 2026',
     },
     pin: {
       title: 'Código PIN',
@@ -199,6 +203,8 @@ export const messages: Record<LocaleCode, MessageTree> = {
       nativeHint:
         'L’autorisation Bluetooth peut être demandée. Restez à proximité de la boîte.',
       error: 'Erreur de connexion : {msg}',
+      contactUs: 'Nous contacter',
+      copyright: '© 2026',
     },
     pin: {
       title: 'Code PIN',
@@ -275,6 +281,8 @@ export const messages: Record<LocaleCode, MessageTree> = {
       nativeHint:
         'Potrebbe essere richiesto il permesso Bluetooth. Resta vicino alla scatola.',
       error: 'Errore di connessione: {msg}',
+      contactUs: 'Contattaci',
+      copyright: '© 2026',
     },
     pin: {
       title: 'Codice PIN',
@@ -349,6 +357,8 @@ export const messages: Record<LocaleCode, MessageTree> = {
       webHint: '在电脑上请使用 Chrome 或 Edge 以使用 Web Bluetooth。请保持蓝牙开启。',
       nativeHint: '可能会请求蓝牙权限。请靠近箱子。',
       error: '连接错误：{msg}',
+      contactUs: '联系我们',
+      copyright: '© 2026',
     },
     pin: {
       title: 'PIN 码',
@@ -423,6 +433,8 @@ export const messages: Record<LocaleCode, MessageTree> = {
       webHint: 'Gebruik Chrome of Edge op desktop voor Web Bluetooth. Houd Bluetooth aan.',
       nativeHint: 'Bluetooth-toestemming kan worden gevraagd. Blijf in de buurt van de box.',
       error: 'Verbindingsfout: {msg}',
+      contactUs: 'Neem contact op',
+      copyright: '© 2026',
     },
     pin: {
       title: 'PIN-code',
